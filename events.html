@@ -1,0 +1,144 @@
+<!-- JQuery Practice -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>JQuery Practice</title>
+</head>
+<body>
+<style>
+    .mydiv{
+        background-color: pink;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .mydiv3{
+        background-color: orange;
+        height: 200px;
+        width: 300px;
+        overflow: scroll;
+        padding: 10px;
+    }
+</style>
+
+<div class="mydiv">
+    <h2>This is Heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, fugit?</p>
+</div>
+
+<div class="mydiv2">
+    <h3>This Container is for blur method</h3>
+    <input type="text" class="input1">
+    <button>Click Me</button>
+</div>
+
+<div class="mydiv2">
+    <h3>This container is for change method</h3>
+    <input type="text" class="input2">
+    <button>Click Me</button>
+</div>
+
+<div class="mydiv2">
+    <h3>This container is for Focus method</h3>
+    <input type="text" class="input3">
+    <span style="display: none;">Prashant Chaudhary</span>
+    <button>Click Me</button>
+</div>
+
+<p class="hover">Lorem ipsum dolor sit amet.</p>
+
+
+<div class="mydiv2">
+    <h3>Window Resize Count</h3>
+    <p>Resize count is : <span class="count">0</span></p>
+</div>
+
+<div class="mydiv3">
+    <h2>Scroll Effect Check</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus quisquam eum, architecto unde debitis voluptatem minus quo vero sint placeat? Iste earum pariatur, repudiandae vitae cum optio quidem est quasi officiis fugiat debitis porro possimus soluta vero animi inventore et perspiciatis voluptatem esse consequuntur voluptates dignissimos. Aliquid blanditiis quo nemo, quisquam, voluptas nisi reprehenderit sequi provident ducimus earum eum aut sunt consectetur quibusdam quia dolorum, amet sed quos distinctio quod quas in. Accusamus maiores aliquam quae nemo nisi eos aut optio sit, repudiandae quos placeat debitis explicabo ducimus pariatur adipisci modi, quisquam dolor ea. Similique vel delectus repellat aut.</p>
+</div>
+<p>Scroll count is : <span class="count2">0</span></p>
+<script>
+// Click
+$('.mydiv').click(function(){
+    $('.mydiv').css('background-color','lightblue');
+});
+
+// Double Click
+$('.mydiv').dblclick(function(){
+    $('.mydiv').css('background-color','red');
+});
+
+// Right Click
+$('.mydiv').contextmenu(function(){
+    $('.mydiv').css('background-color','orange');
+});
+
+// Mouse Enter
+$('.mydiv').mouseenter(function(){
+    $('h2').css('background-color','yellow');
+});
+
+// Mouse Leave
+$('.mydiv').mouseleave(function(){
+    $('h2').css('background-color','tan');
+});
+
+// KeyPress
+$('body').keypress(function(){
+    $('p').css('font-style','italic');
+});
+
+// Keyup
+$('body').keyup(function(){
+    $('p').css('font-style','normal');
+});
+
+// Keydown
+$('body').keydown(function(){
+    $('p').css('font-weight','bold');
+});
+
+
+// Blur
+$('.input1').blur(function(){
+    alert("Blur activate");
+});
+
+// Change
+$('.input2').change(function(){
+    alert("Change activate");
+});
+
+// Focus
+$('.input3').focus(function(){
+    $("span").css("display","inline").fadeOut(2000);
+});
+
+
+// Hover
+$('.hover').hover(function(){
+    $(this).css('background-color','tan');
+});
+
+// Window Resize
+var x=0;
+$(window).resize(function(){
+    $(".count").text(x+=1);
+});
+
+// Scroll
+var y=0;
+$(".mydiv3").scroll(function(){
+    $(".count2").text(y+=1);
+});
+
+
+
+</script>
+</body>
+</html>
