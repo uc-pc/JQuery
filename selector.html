@@ -1,0 +1,48 @@
+<!-- JQuery Practice -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>JQuery Practice</title>
+</head>
+<body>
+    <h1>This is Syntex Testing Page</h1>
+    <div class="test">
+        <h1>Container 1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente commodi velit, illum quibusdam quod quo. Aperiam ratione voluptatem nobis debitis explicabo architecto labore veritatis dolorum. Vero harum soluta nostrum repellendus!</p>
+    </div>
+
+    <button>Click Me</button>
+    <p id="text">Testing button text : It hide when button click</p>
+
+    <div class="cont">
+        <h1>Container 2</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, obcaecati!</p>
+    </div>
+    <ul class="ul">
+        <li>Red</li>
+        <li class="test_li">White</li>
+        <li>Orange</li>
+        <li class="test_li">Blue</li>
+        <li>Black</li>
+    </ul>
+
+
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#text").hide();
+            });
+        });
+
+        $(document).ready(function(){
+            $(".cont, .test_li").css("border","2px solid Blue");
+        });
+    </script>
+
+</body>
+</html>
