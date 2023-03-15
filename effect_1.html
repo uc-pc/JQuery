@@ -1,0 +1,236 @@
+<!-- JQuery Practice -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>JQuery Practice</title>
+</head>
+<body>
+<style>
+.fade ,.text{
+    border: 2px solid black;
+    padding: 10px;
+    background-color: tan;
+    text-align: center;
+}
+.text{
+    display: none;
+    padding: 10px;
+}
+.fade3 ,.text3{
+    border: 2px solid black;
+    padding: 10px;
+    background-color: tan;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.text3{
+    display: none;
+    padding: 10px;
+}
+
+.fade2 ,.text2{
+    border: 2px solid black;
+    padding: 10px;
+    background-color: tan;
+    text-align: center;
+}
+.text2{
+    padding: 10px;
+}
+.test1{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-top: 5px;
+    display: none;
+}
+.test2{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    margin-top: 5px;
+    display: none;
+}
+.test3{
+    width: 50px;
+    height: 200px;
+    background-color: green;
+    margin-top: 5px;
+    display: none;
+}
+.test4{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-top: 5px;
+}
+.test5{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    margin-top: 5px;
+}
+.test6{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    margin-top: 5px;
+}
+.test7{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin-top: 5px;
+    display: none;
+}
+.test8{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    margin-top: 5px;
+    display: none;
+}
+.test9{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    margin-top: 5px;
+    display: none;
+}
+.obj{
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+</style>
+
+
+<div class="cont1">
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, repellendus!</p>
+</div>
+
+<br>
+<div class="cont2">
+    <div class="fade">Click Me for Testing</div>
+    <div class="text">Hello welcome! This is JQuery Practice</div>
+</div>
+
+<br>
+<div class="cont2">
+    <div class="fade2">Click Me for Testing</div>
+    <div class="text2">Hello welcome! This is JQuery Practice</div>
+</div>
+<br>
+<div class="cont3">
+    <div class="fade3">Click Me for Testing</div>
+    <div class="text3">Hello welcome! This is JQuery Practice</div>
+</div>
+
+
+<br><br>
+
+<button class="btn">Click Me for Fade In</button>
+<div class="test1"></div>
+<div class="test2"></div>
+<div class="test3"></div>
+
+<button class="btn2">Click Me for Fade Out</button>
+<div class="test4"></div>
+<div class="test5"></div>
+<div class="test6"></div>
+
+<button class="btn3">Click Me for Fade Toggle</button>
+<div class="test7"></div>
+<div class="test8"></div>
+<div class="test9"></div>
+
+
+<hr>
+<button class="anim">Click me to animate</button>
+<div class="obj"></div>
+
+<hr>
+<p class="obj2">Lorem ipsum dolor sit amet.</p>
+<button class="testing">click me to test</button>
+
+<hr>
+<button class="testing2">Click Me</button>
+<div class="cont3">
+    <div class="fade3">Click Me for Testing</div>
+    <div class="text3">Hello welcome! This is JQuery Practice</div>
+</div>
+<script>
+    // Hide
+    $(".hide").click(function(){
+        $(".p1").hide();
+    })
+
+    // Show
+    $(".show").click(function(){
+        $(".p1").show();
+    })
+
+    // slide Down
+    $(".fade").click(function(){
+        $(".text").slideDown("slow");
+    })
+    // slide Up
+    $(".fade2").click(function(){
+        $(".text2").slideUp("slow");
+    })
+    // slide Toggle
+    $(".fade3").click(function(){
+        $(".text3").slideToggle("slow");
+    })
+
+    // Fade In
+    $(".btn").click(function(){
+        $(".test1").fadeIn();
+        $(".test2").fadeIn("slow");
+        $(".test3").fadeIn(3000);
+    })
+
+    // Fade Out
+    $(".btn2").click(function(){
+        $(".test4").fadeOut();
+        $(".test5").fadeOut("slow");
+        $(".test6").fadeOut(3000);
+    })
+
+    // Fade Toggle
+    $(".btn3").click(function(){
+        $(".test7").fadeToggle();
+        $(".test8").fadeToggle("slow");
+        $(".test9").fadeToggle(3000);
+    })
+
+    // Animate
+    $(".anim").click(function(){
+        $(".obj").animate({
+            left:'250px',
+            height:'150px',
+            width:'150px'
+        });
+    })
+    // 
+    $(".testing").click(function(){
+        $(".obj2").css("color","red").slideUp(2000).slideDown(2000);
+    })
+
+    // 
+    $(".fade3").click(function(){
+        $(".text3").slideDown(5000);
+    });
+    $(".testing2").click(function(){
+        $(".text3").stop();
+    });
+</script>
+</body>
+</html>
