@@ -1,0 +1,97 @@
+<!-- JQuery Practice -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>JQuery Practice</title>
+</head>
+<style>
+    .parent{
+        display:block;
+        border: 2px solid gray;
+        color: gray;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+<body class="parent"> body
+    <div>div
+        <ul>ul
+            <li>li
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("span").parent().css({"color":"green", "border":"2px solid green"})
+    })
+    $(document).ready(function(){
+        $("span").parents().css({"color":"green", "border":"2px solid green"})
+    })
+    $(document).ready(function(){
+        $("span").parentsUntil("div").css({"color":"green", "border":"2px solid green"})
+    })
+</script> -->
+<!-- <style>
+    .parent *{
+        display:block;
+        border: 2px solid gray;
+        color: gray;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+<body>body
+    <div>div
+        <ul>ul
+            <li>li
+                <span>
+                    span
+                </span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("div").children().css({"color":"green", "border":"2px solid green"})
+    });
+    $(document).ready(function(){
+        $("div").find("ul").css({"color":"green", "border":"2px solid green"})
+    });
+</script>
+<style>
+    .siblings *{
+        display:block;
+        border: 2px solid gray;
+        color: gray;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+<body class="siblings">
+    <div>
+        <p>Para</p>
+        <span>span</span>
+        <h2>heading 2</h2>
+        <h3>heading 3</h3>
+        <p>para</p>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("h2").siblings().css({"color":"green", "border":"2px solid green"})
+    });
+    $(document).ready(function(){
+        $("h2").siblings("p").css({"color":"green", "border":"2px solid green"})
+    });
+    $(document).ready(function(){
+        $("h2").next().css({"color":"green", "border":"2px solid green"})
+    });
+</script>
+</html>
